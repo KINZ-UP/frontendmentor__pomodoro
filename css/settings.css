@@ -1,4 +1,4 @@
-.setting-container {
+#setting-container {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -7,8 +7,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+  z-index: 1000;
+  padding: 24px;
 }
-.setting-container .back {
+#setting-container .back {
   position: fixed;
   background: #0a0c1c;
   opacity: 0.5;
@@ -16,7 +19,7 @@
   height: 100%;
 }
 .setting {
-  width: fit-content;
+  width: min(540px, 100%);
   border-radius: 25px;
   color: #000;
   position: relative;
@@ -29,6 +32,13 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #e3e1e1;
+}
+.setting-header .close-btn {
+  padding: 5px;
+  border-radius: 100%;
+}
+.setting-header .close-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 .setting-main {
   padding: 0 40px 40px 40px;
@@ -45,8 +55,23 @@
 }
 .setting-main section.time .form-containers {
   display: grid;
-  grid-template-columns: repeat(3, 140px);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .setting-main section.time .form-containers {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .setting-main section.time .form-containers .form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+  }
+  .setting-main section.time .form-containers .form-container .form-number {
+    height: 40px;
+  }
 }
 .setting-main section.time .form-containers p {
   margin-bottom: 8px;
@@ -55,7 +80,6 @@
 }
 
 .form-number {
-  width: 140px;
   height: 48px;
   border-radius: 10px;
   background: #eff1fa;
@@ -129,4 +153,16 @@ section.type-option .option:hover::before {
   height: 120%;
   border-radius: 50%;
   border: 1px solid #eff1fa;
+}
+
+section.type-option.font .option.active {
+  background-color: #161932;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.type-option.color .option.active::after {
+  content: url(../assets/icon-check.svg);
+  transform: translateY(2px);
 }
