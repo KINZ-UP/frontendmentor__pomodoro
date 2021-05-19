@@ -1,0 +1,132 @@
+.setting-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.setting-container .back {
+  position: fixed;
+  background: #0a0c1c;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+.setting {
+  width: fit-content;
+  border-radius: 25px;
+  color: #000;
+  position: relative;
+  background: #fff;
+  z-index: 1000;
+}
+.setting-header {
+  padding: 34px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e3e1e1;
+}
+.setting-main {
+  padding: 0 40px 40px 40px;
+}
+
+.setting-main section {
+  padding: 24px 0;
+}
+.setting-main section:not(:last-child) {
+  border-bottom: 1px solid #e3e1e1;
+}
+.setting-main section.time h4 {
+  margin-bottom: 22px;
+}
+.setting-main section.time .form-containers {
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  column-gap: 20px;
+}
+.setting-main section.time .form-containers p {
+  margin-bottom: 8px;
+  color: #1e213f;
+  opacity: 0.4;
+}
+
+.form-number {
+  width: 140px;
+  height: 48px;
+  border-radius: 10px;
+  background: #eff1fa;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+input[type='number'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.form-number input[type='number'] {
+  flex: 1;
+  height: 100%;
+  min-width: 50px;
+  margin-right: 10px;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 14px;
+}
+.form-number .arrow-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+}
+.form-number .arrow-wrapper img:hover {
+  /* background-color: black; */
+  filter: url(#black);
+}
+
+.setting button {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+section.type-option {
+  display: flex;
+  align-items: center;
+}
+section.type-option h4 {
+  margin-right: auto;
+}
+section.type-option .option {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #e3e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  position: relative;
+}
+section.type-option .option:hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  border: 1px solid #eff1fa;
+}

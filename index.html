@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Pomodoro app</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="app" class="theme1">
+      <h2>pomodoro</h2>
+      <div class="state-container">
+        <div class="state pomodoro active">pomodoro</div>
+        <div class="state short-break">short break</div>
+        <div class="state long-break">long break</div>
+      </div>
+      <div class="timer-container">
+        <svg
+          class="circle-chart"
+          viewbox="0 0 340 340"
+          width="340"
+          height="340"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            class="circle-chart__circle"
+            stroke-width="11"
+            stroke-linecap="round"
+            stroke-dasharray="1100, 1031"
+            fill="none"
+            cx="170"
+            cy="170"
+            r="164"
+          />
+        </svg>
+        <h1>17:59</h1>
+        <h3>RESTART</h3>
+      </div>
+      <div class="setting-button">
+        <img src="assets/icon-settings.svg" alt="setting" />
+      </div>
+    </div>
+    <div class="setting-container"></div>
+    <svg id="black-filter">
+      <filter id="black">
+        <feColorMatrix
+          values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 5 0"
+        ></feColorMatrix>
+      </filter>
+    </svg>
+  </body>
+  <script>
+    const $circle = document.querySelector('circle');
+    console.log($circle);
+    console.dir($circle.getTotalLength());
+  </script>
+</html>
