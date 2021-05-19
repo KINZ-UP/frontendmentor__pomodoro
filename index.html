@@ -16,14 +16,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="src/index.js" type="module" defer></script>
   </head>
   <body>
     <div id="app" class="theme1">
-      <h2>pomodoro</h2>
-      <div class="state-container">
-        <div class="state pomodoro active">pomodoro</div>
-        <div class="state short-break">short break</div>
-        <div class="state long-break">long break</div>
+      <h2 id="logo">pomodoro</h2>
+      <div id="state" class="state-container">
+        <div name="pomodoro" class="state pomodoro active">pomodoro</div>
+        <div name="shortBreak" class="state short-break">short break</div>
+        <div name="longBreak" class="state long-break">long break</div>
       </div>
       <div class="timer-container">
         <svg
@@ -37,21 +38,79 @@
             class="circle-chart__circle"
             stroke-width="11"
             stroke-linecap="round"
-            stroke-dasharray="1100, 1031"
             fill="none"
             cx="170"
             cy="170"
             r="164"
           />
         </svg>
-        <h1>17:59</h1>
-        <h3>RESTART</h3>
+        <h1 id="timer"></h1>
+        <h3 id="go-stop">START</h3>
       </div>
-      <div class="setting-button">
+      <div id="setting-button">
         <img src="assets/icon-settings.svg" alt="setting" />
       </div>
     </div>
-    <div class="setting-container"></div>
+    <div id="setting-container">
+      <div class="setting">
+        <div class="setting-header">
+          <h2>Settings</h2>
+          <div class="close-btn">
+            <img src="./assets/icon-close.svg" alt="close" />
+          </div>
+        </div>
+        <div class="setting-main">
+          <section class="time">
+            <h4>TIME (MINUTES)</h4>
+            <div class="form-containers"></div>
+          </section>
+          <section class="type-option font">
+            <h4>FONT</h4>
+            <div
+              class="option active"
+              name="Kumbh Sans"
+              style="font-family: 'Kumbh Sans'"
+            >
+              Aa
+            </div>
+            <div
+              class="option"
+              name="Roboto Slab"
+              style="font-family: 'Roboto Slab'"
+            >
+              Aa
+            </div>
+            <div
+              class="option"
+              name="Space Mono"
+              style="font-family: 'Space Mono'"
+            >
+              Aa
+            </div>
+          </section>
+          <section class="type-option color">
+            <h4>COLOR</h4>
+            <div
+              class="option active"
+              name="#f87070"
+              style="background-color: #f87070"
+            ></div>
+            <div
+              class="option"
+              name="#70f3f8"
+              style="background-color: #70f3f8"
+            ></div>
+            <div
+              class="option"
+              name="#d881f8"
+              style="background-color: #d881f8"
+            ></div>
+          </section>
+        </div>
+        <button class="apply-btn">Apply</button>
+      </div>
+      <div class="back"></div>
+    </div>
     <svg id="black-filter">
       <filter id="black">
         <feColorMatrix
