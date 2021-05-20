@@ -146,7 +146,6 @@ export default class Timer {
   }
 
   pause() {
-    console.log('??');
     clearInterval(this.timer);
     this.isOn = 'paused';
     this.containers.button.innerText = this.buttonText[this.isOn];

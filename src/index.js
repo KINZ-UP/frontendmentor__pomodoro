@@ -161,7 +161,6 @@ function onClickOptions($options, option) {
       } else {
         color = $option.getAttribute('name');
       }
-      console.log(font, color);
     });
   });
 }
