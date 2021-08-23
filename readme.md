@@ -19,8 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/KINZ-UP/frontendmentor__pomodoro)
-- Live Site URL: [Add live site URL here](https://kinz-up.github.io/frontendmentor__pomodoro/)
+- [Live Site URL](https://kinz-up.github.io/frontendmentor__pomodoro/)
 
 ### Built with
 
